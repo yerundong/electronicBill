@@ -1,0 +1,1 @@
+<view class="bs_container"><input type="text" data-event-opts="{{[['input',[['__set_model',['','msg','$event',[]]]]]]}}" value="{{msg}}" bindinput="__e"/>{{'msg:'+msg+''}}<view class="padding flex flex-direction"><button data-event-opts="{{[['tap',[['add',['$event']]]]]}}" class="cu-btn bg-blue margin-tb-sm lg" bindtap="__e">add msg</button></view></view>

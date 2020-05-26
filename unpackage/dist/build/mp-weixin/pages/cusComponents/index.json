@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "自定义组件",
+  "usingComponents": {
+    "test": "/cus-components/test/index"
+  }
+}
