@@ -1,2 +1,1 @@
-<view class="bs_container"><view class="con">asdasdasdasd
-		asdasdasdasdasd</view></view>
+<view class="bs_container"><view class="top_wrap"><view class="blue_rad_bg"></view><an-notice-bar vue-id="6b3d36ea-1" bgColor="#FFF29C" color="#FF6600" moreColor="#FF6600" switchTime="5" msgList="{{noticeMsg}}" data-event-opts="{{[['^more',[['noticeMore']]]]}}" bind:more="__e" bind:__l="__l"></an-notice-bar></view></view>

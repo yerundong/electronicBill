@@ -24,8 +24,28 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.con {
-  height: 4000rpx;
+.top_wrap {
+  height: 430rpx;
   background-color: red;
+  position: relative;
+  overflow: hidden;
+}
+.top_wrap .blue_rad_bg {
+  height: 400rpx;
+  background: #3F66ED;
+  -webkit-border-radius: 0 0 50% 50%;
+          border-radius: 0 0 50% 50%;
+  width: 140%;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: 0;
+}
+.top_wrap an-notice-bar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
