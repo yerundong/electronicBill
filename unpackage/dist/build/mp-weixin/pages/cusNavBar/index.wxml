@@ -1,1 +1,0 @@
-<view class="container"><uni-nav-bar vue-id="1ccab4fb-1" status-bar fixed left-icon="back" title="自定义导航栏" data-event-opts="{{[['^clickLeft',[['goback']]]]}}" bind:clickLeft="__e" bind:__l="__l"></uni-nav-bar><view class="item">11111</view><view class="item">222222</view><view class="item">33333</view><view class="item">444444</view></view>

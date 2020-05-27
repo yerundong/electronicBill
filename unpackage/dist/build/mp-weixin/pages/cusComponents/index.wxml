@@ -1,1 +1,0 @@
-<view class="container"><test vue-id="33d79bd6-1" msg="{{msg}}" bind:__l="__l"></test></view>

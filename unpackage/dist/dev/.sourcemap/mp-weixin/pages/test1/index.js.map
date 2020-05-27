@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:////Users/mac/工作/uniapp-study/main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA,wCAAmB;AACnB;AACA,4F;AACAA,UAAU,CAACC,cAAD,CAAV,C","file":"pages/test1/index.js","sourcesContent":["import 'uni-pages';import '@dcloudio/uni-stat';\nimport Vue from 'vue'\nimport Page from './pages/test1/index.vue'\ncreatePage(Page)"],"sourceRoot":""}
