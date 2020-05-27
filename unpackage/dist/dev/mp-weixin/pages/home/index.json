@@ -5,6 +5,7 @@
   "backgroundColor": "#3F66ED",
   "navigationStyle": "default",
   "usingComponents": {
-    "an-notice-bar": "/components/an-notice-bar/an-notice-bar"
+    "an-notice-bar": "/components/an-notice-bar/an-notice-bar",
+    "uni-icons": "/components/uni-icons/uni-icons"
   }
 }

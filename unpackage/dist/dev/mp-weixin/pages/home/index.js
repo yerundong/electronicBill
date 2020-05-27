@@ -95,6 +95,9 @@ __webpack_require__.r(__webpack_exports__);
 var components = {
   anNoticeBar: function() {
     return __webpack_require__.e(/*! import() | components/an-notice-bar/an-notice-bar */ "components/an-notice-bar/an-notice-bar").then(__webpack_require__.bind(null, /*! @/components/an-notice-bar/an-notice-bar.vue */ 62))
+  },
+  uniIcons: function() {
+    return Promise.all(/*! import() | components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/components/uni-icons/uni-icons.vue */ 54))
   }
 }
 var render = function() {
@@ -135,6 +138,59 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var AnNoticeBar = function AnNoticeBar() {__webpack_require__.e(/*! require.ensure | components/an-notice-bar/an-notice-bar */ "components/an-notice-bar/an-notice-bar").then((function () {return resolve(__webpack_require__(/*! @/components/an-notice-bar/an-notice-bar.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
