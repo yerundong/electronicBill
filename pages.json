@@ -1,42 +1,50 @@
 {
 	"pages": [
+		 {
+		 	"path": "pages/home/index",
+		 	"style": {
+		 		"navigationBarTitleText": "电子票据移动应用",
+		 		"navigationBarBackgroundColor": "#3F66ED",
+		 		"navigationBarTextStyle": "white",
+		 		"backgroundColor": "#3F66ED",
+		 		"navigationStyle": "default"
+		 	}
+		 },{
+		 	"path": "pages/login/index",
+		 	"style": {
+		 		"navigationBarTitleText": "登陆",
+		 		"navigationBarBackgroundColor": "#fff",
+		 		"navigationBarTextStyle": "black"
+		 	}
+		 },
+		 {
+		 	"path": "pages/bill-archive/index",
+		 	"style": {
+		 		"navigationBarTitleText": "票据归档",
+		 		"navigationBarBackgroundColor": "#fff",
+		 		"navigationBarTextStyle": "black"
+		 	}
+		 },
+		 {
+		 	"path": "pages/message-inform/index",
+		 	"style": {
+		 		"navigationBarTitleText": "消息通知",
+		 		"navigationBarBackgroundColor": "#fff",
+		 		"navigationBarTextStyle": "black"
+		 	}
+		 },
+		 {
+		 	"path": "pages/personal-center/index",
+		 	"style": {
+		 		"navigationBarTitleText": "个人中心",
+		 		"navigationBarBackgroundColor": "#fff",
+		 		"navigationBarTextStyle": "black"
+		 	}
+		 },
 		{
-			"path": "pages/home/index",
+			"path": "pages/data-diff-detail/index",
 			"style": {
-				"navigationBarTitleText": "电子票据移动应用",
-				"navigationBarBackgroundColor": "#3F66ED",
-				"navigationBarTextStyle": "white",
-				"backgroundColor": "#3F66ED",
-				"navigationStyle": "default"
-			}
-		},{
-			"path": "pages/login/index",
-			"style": {
-				"navigationBarTitleText": "登陆",
-				"navigationBarBackgroundColor": "#fff",
-				"navigationBarTextStyle": "black"
-			}
-		},
-		{
-			"path": "pages/bill-archive/index",
-			"style": {
-				"navigationBarTitleText": "票据归档",
-				"navigationBarBackgroundColor": "#fff",
-				"navigationBarTextStyle": "black"
-			}
-		},
-		{
-			"path": "pages/message-inform/index",
-			"style": {
-				"navigationBarTitleText": "消息通知",
-				"navigationBarBackgroundColor": "#fff",
-				"navigationBarTextStyle": "black"
-			}
-		},
-		{
-			"path": "pages/personal-center/index",
-			"style": {
-				"navigationBarTitleText": "个人中心",
+				"navigationBarTitleText": "差异明细",
 				"navigationBarBackgroundColor": "#fff",
 				"navigationBarTextStyle": "black"
 			}

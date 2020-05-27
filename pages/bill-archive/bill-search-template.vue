@@ -16,8 +16,12 @@
 </template>
 
 <script>
+import uniCard from '@/components/uni-card/uni-card.vue';
 export default {
-	name: 'bill-template',
+	name: 'bill-search-template',
+	components: {
+		uniCard
+	},
 	props: {
 		bill: Object
 	}
@@ -31,14 +35,14 @@ export default {
 	
 	.bill-content {
 		flex: 2;
-		margin: 0 5px;
+		margin: 0 10rpx;
 	}
 	.bill-amount {
 		flex: 1;
-		height: 57px;
-		margin: atuo;
-		font-size: 15px;
-		line-height: 57px;
+		height: 100%;
+		margin: auto;
+		font-size: 30rpx;
+		line-height: 100%;
 		text-align: center;
 	}
 }

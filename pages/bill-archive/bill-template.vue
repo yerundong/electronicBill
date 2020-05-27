@@ -32,14 +32,14 @@ export default {
 	flex-direction: row;	
 	.bill-content {
 		flex: 2;
-		margin: 0 5px;
+		margin: 0 10rpx;
 	}
 	.bill-issueNum {
 		flex: 1;
-		height: 38px;
-		margin: atuo;
-		font-size: 15px;
-		line-height: 38px;
+		height: 100%;
+		margin: auto;
+		font-size: 30rpx;
+		line-height: 100%;
 		text-align: center;
 	}
 }

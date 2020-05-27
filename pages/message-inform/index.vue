@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import uniCard from '@/components/uni-card/uni-card.vue';
 export default {
 	name: 'message-inform',
+	components: {
+		uniCard
+	},
 	data () {
 		return {
 			messages: []
