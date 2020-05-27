@@ -14,17 +14,17 @@ const request = function({
 		'content-type': 'application/json',
 		'cookie': cookie_
 	};
-	let stamp = new Date().getTime();
-	let stringA = `appid=appid&data=${JSON.stringify(options.data)}&noise=${stamp}&key=192006250b4c09247ec02f6a2d&version=1.0`;
-	let sign = md5(stringA);
-	let data = {
-		"appid": "appid",
-		"data": options.data,
-		"noise": stamp,
-		"version": "1.0",
-		"stringA": stringA,
-		"sign": sign
-	}
+	// let stamp = new Date().getTime();
+	// let stringA = `appid=appid&data=${JSON.stringify(options.data)}&noise=${stamp}&key=192006250b4c09247ec02f6a2d&version=1.0`;
+	// let sign = md5(stringA);
+	// let data = {
+	// 	"appid": "appid",
+	// 	"data": options.data,
+	// 	"noise": stamp,
+	// 	"version": "1.0",
+	// 	"stringA": stringA,
+	// 	"sign": sign
+	// }
 	
 		return new Promise((resolve, reject) => {
 			const requestTask = uni.request({

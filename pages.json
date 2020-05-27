@@ -6,8 +6,11 @@
 				"navigationBarTitleText": "电子票据移动应用",
 				"navigationBarBackgroundColor": "#3F66ED",
 				"navigationBarTextStyle": "white",
-				"backgroundColor": "#3F66ED",
-				"navigationStyle": "default"
+				"backgroundColor": "#FFFFFF",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "default",
+				"backgroundColorTop": "#3F66ED",
+				"backgroundColorBottom": "#FFFFFF"
 			}
 		},{
 			"path": "pages/login/index",

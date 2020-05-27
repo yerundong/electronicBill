@@ -58,6 +58,27 @@
 				</view>
 			</view>
 		</view>
+		<!-- 票据库存 -->
+		<view class="bill_stock">
+			<view class="">
+				<view class="stock_title">
+					票据库存
+				</view>
+				<view class="stock_item" v-for="(item, index) in stockList" :key="index">
+					<image class="stock_icon" :src="item.icon" mode=""></image>
+					<view class="stock_con">
+						<view class="con_top">
+							{{item.name}}
+							<text>{{item.count}}</text>
+						</view>
+						<view class="con_bottom">
+							{{item.num}}
+							<text v-if="item.noEn">库存不足</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -81,15 +102,50 @@ export default {
 					text: '阿萨德阿萨德阿萨德阿萨德阿萨德',
 					id: '3'
 				}
-			]
+			],
+			stockList:[{
+				name: '医疗门诊机打票据',
+				icon: '../../static/icon/shouye_21.png',
+				count: 34,
+				noEn: true,
+				num: 234829
+			},{
+				name: '医疗门诊电子票据',
+				icon: '../../static/icon/shouye_24.png',
+				count: 3124,
+				noEn: false,
+				num: 234829
+			},{
+				name: '医疗住院机打票据',
+				icon: '../../static/icon/shouye_26.png',
+				count: 23434,
+				noEn: false,
+				num: 234829
+			}]
 		};
 	},
 	methods: {
 		noticeMore(item) {
 			console.log(item);
+			uni.setBackgroundColor({
+				backgroundColor: '#ffffff'
+			})
 		}
 	},
+	onPullDownRefresh(){
+		uni.setBackgroundColor({
+			backgroundColor: '#fff'
+		})
+		 uni.stopPullDownRefresh();
+	},
+	onReachBottom(){
+		
+	},
 	created() {
+		// this.action.formatNumberUnit({
+		// 	value: 123123,
+		// 	suffix: '元'
+		// })
 		// this.request.login({a: 1, b:123})
 		// this.action.judgeLogin()
 	}
@@ -223,6 +279,56 @@ export default {
 			.name{
 				font-size: 22rpx;
 				padding-top: 10rpx;
+			}
+		}
+	}
+}
+.bill_stock{
+	padding: 0 35rpx;
+	.stock_title{
+		padding-top: 26rpx;
+		font-size:28rpx;
+		line-height:26rpx;
+	}
+	.stock_item{
+		height: 135rpx;
+		border-bottom: 1rpx solid rgba(0,0,0,.15);
+		display: flex;
+		align-items: center;
+		.stock_icon{
+			width: 54rpx;
+			height: 54rpx;
+			margin-right: 26rpx;
+		}
+		.stock_con{
+			width: 100%;
+			.con_top{
+				height:26rpx;
+				font-size:28rpx;
+				line-height:30rpx;
+				margin-bottom: 22rpx;
+				text{
+					float: right;
+					font-size:30rpx;
+					font-weight:bold;
+				}
+			}
+			.con_bottom{
+				height:19rpx;
+				font-size:24rpx;
+				color:#8C8C8C;
+				text{
+					display: block;
+					width:80rpx;
+					height:24rpx;
+					background:rgba(254,240,234,1);
+					border:1rpx solid rgba(233, 89, 36, 1);
+					text-align: center;
+					line-height: 24rpx;
+					font-size:14rpx;
+					color: #E95924;
+					float: right;
+				}
 			}
 		}
 	}
