@@ -21,3 +21,21 @@ page{
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+button.cu-btn.bg-blue-1{
+	color: #ffffff;
+	background-color: #7392FF;
+	font-size: 36rpx;
+	height: 90rpx;
+}
+button.cu-btn.blank{
+	border: none;
+	background-color: #ffffff;
+	color: #333;
+}
+.bs_container .cu-form-group{
+	border: none;
+}
+.bs_container .cu-form-group{
+	border-bottom: 1rpx solid #eee;
+}

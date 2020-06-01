@@ -1,28 +1,33 @@
 <template>
 	<view class="bs_container">
-		<form>
-			<view class="cu-form-group titleWidth">
-				<view class="title">服务地址</view>
-				<input placeholder="服务地址" name="input" v-model="dataForm.url"></input>
-				<text class="iconfont iconsaomiao" @click="scanHandle"></text>
+		<form class="form_top">
+			<view class="cu-form-group">
+				<view class="title">
+					<text class="iconfont iconzaixian"></text>
+				</view>
+				<input placeholder="请输入服务地址" name="input" v-model="dataForm.url"></input>
+				<text class="iconfont iconsaoma" @click="scanHandle"></text>
 			</view>
-			<view class="cu-form-group titleWidth">
-				<view class="title">用户账号</view>
-				<input placeholder="账号" name="input" v-model="dataForm.usernumber"></input>
+			<view class="cu-form-group">
+				<view class="title">
+					<text class="iconfont iconmima"></text>
+				</view>
+				<input placeholder="请输入账号" name="input" v-model="dataForm.usernumber"></input>
 			</view>
-			<view class="cu-form-group titleWidth">
-				<view class="title">用户密码</view>
-				<input placeholder="密码" type="password" name="input" v-model="dataForm.password"></input>
-			</view>
-			<view class="rememberPsw_wrap">
-				<checkbox value="rememberPsw" checked="true" />记住密码
+			<view class="cu-form-group">
+				<view class="title">
+					<text class="iconfont iconyonghu"></text>
+				</view>
+				<input placeholder="请输入密码" type="password" name="input" v-model="dataForm.password"></input>
 			</view>
 		</form>
-		<view class="padding flex flex-direction">
-			<button @click="loginHandle" class="cu-btn bg-blue margin-tb-sm lg">登陆</button>
-			<button @click="wxLoginHandle" class="cu-btn bg-blue margin-tb-sm lg">微信授权快捷登陆</button>
-			<!-- <button open-type="getUserInfo" class="cu-btn bg-blue margin-tb-sm lg" @getuserinfo="getUserInfo">getUserInfo</button>
-			<button open-type="getPhoneNumber" class="cu-btn bg-blue margin-tb-sm lg" @getphonenumber="getPhoneNumber">getPhoneNumber</button> -->
+		<view class="padding flex flex-direction bottom_btn">
+			<button v-if="type==1" @click="bindHandle" class="cu-btn round bg-blue-1 lg">
+				绑定
+			</button>
+			<button v-else @click="loginHandle" class="cu-btn round bg-blue-1 lg">
+				登陆
+			</button>
 		</view>
 	</view>
 </template>
@@ -33,11 +38,12 @@
 	export default {
 		data() {
 			return {
+				type: '',
 				rememberPsw: true,
 				dataForm: {
 					url: '',
 					usernumber: '',
-					password: '',
+					password: '', 
 				},
 				rules: {
 					url: {
@@ -89,18 +95,22 @@
 				console.log(e.detail.iv)
 				console.log(e.detail.encryptedData)
 			},
+			// 绑定
+			bindHandle(){
+				const valid = this.WxValidate.checkForm(this.dataForm);
+				console.log(valid)
+				if (valid) {
+				
+				} else {
+					uni.showToast({
+						title: this.WxValidate.errorList[0].msg,
+						duration: 2000,
+						icon: 'none'
+					});
+				}
+			},
+			// 登陆
 			loginHandle() {
-				wx.navigateToMiniProgram({
-				  appId: 'wx63930b9d12a42a99',
-				  path: 'page/home/index?id=123',
-				  extraData: {
-				    foo: 'bar'
-				  },
-				  envVersion: 'develop',
-				  success(res) {
-				    // 打开成功
-				  }
-				})
 				const valid = this.WxValidate.checkForm(this.dataForm);
 				console.log(valid)
 				if (valid) {
@@ -150,6 +160,20 @@
 		onShow() {
 			this.initValidate()
 		},
+		onLoad(option) {
+			let {type} = option;
+			this.type = type;
+			
+			if(type==1){
+				uni.setNavigationBarTitle({
+					title: "绑定账号"
+				})
+			}else{
+				uni.setNavigationBarTitle({
+					title: "登陆"
+				})
+			}
+		},
 		created() {
 			that = this
 		}
@@ -157,15 +181,28 @@
 </script>
 
 <style lang="scss">
-	.iconsaomiao {}
-
-	.rememberPsw_wrap {
-		padding-left: 30rpx;
-		font-size: 32rpx;
-
-		checkbox {
-			margin-right: 10rpx;
+	.form_top{
+		padding-top: 40rpx;
+		display: block
+	}
+	.cu-form-group{
+		margin: 0 60rpx;
+		font-size: 28rpx;
+		color: #737373;
+		.iconfont{
+			color: #666666;
+			font-size: 42rpx;
 		}
+		.iconsaoma {
+			color: #666666;
+			font-size: 32rpx;
+		}
+	}
+	.flex-direction{
+		padding: 0 85rpx;
+	}
 
+	.bottom_btn{
+		margin-top: 170rpx;
 	}
 </style>

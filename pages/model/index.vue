@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="bs_container">
 		
 	</view>
 </template>
@@ -18,7 +18,7 @@
 		onShow(){
 			
 		},
-		onLoad(){
+		onLoad(option){
 			
 		},
 		created() {

@@ -9,9 +9,16 @@
 				"navigationStyle": "default"
 			}
 		}, {
-			"path": "pages/login/index",
+			"path": "pages/login/entry",
 			"style": {
 				"navigationBarTitleText": "登陆",
+				"navigationBarBackgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
+			}
+		},{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationBarBackgroundColor": "#fff",
 				"navigationBarTextStyle": "black"
 			}
